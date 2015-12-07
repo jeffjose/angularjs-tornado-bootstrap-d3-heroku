@@ -1,0 +1,22 @@
+@primaryColor: #C62828;
+
+body {
+    font-family: "PT Sans", sans-serif;
+}
+
+.navbar-inverse {
+    background-color: @primaryColor;
+    border-width: 0px;
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .navbar-nav > li > a{
+        color: white;
+
+        &:hover {
+            background-color: darken(@primaryColor, 3);
+        }
+    }
+}

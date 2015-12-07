@@ -1,0 +1,16 @@
+body {
+  font-family: "PT Sans", sans-serif;
+}
+.navbar-inverse {
+  background-color: #C62828;
+  border-width: 0px;
+}
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  background-color: #b92525;
+}
