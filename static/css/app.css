@@ -1,0 +1,27 @@
+.jumbotron {
+    padding-top: 80px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.hostname {
+    font-weight: bold;
+}
+
+.chart-input {
+    margin-top: 20px;
+    display: block;
+
+}
+
+.chart {
+    display: block;
+    background-color: rgb(247, 247, 247);
+    padding: 10px;
+}

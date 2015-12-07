@@ -1,0 +1,47 @@
+<div ng-controller="sampleAppCtrl">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class='container'>
+            <a class="navbar-brand" href="#">MyApp</a>
+            <ul class="nav navbar-nav">
+                <li><a href="#/link1"> Link 1</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <center>
+                <h1> Sample Application </h1>
+                <form ng-submit=search()>
+
+                    <!-- Whatever the user enters get bound to ng-model; So in the variable `host`-->
+                    <!-- We access `host` variable in sampleCtrl (app.js) -->
+                    <input class='input-lg' type='text' ng-keyup='checkHoststring()' ng-model=host placeholder='Enter host(s) ..'>
+                    <!-- We're able to access `search()` because the function is exposed on `$scope` (app.js) -->
+                    <button class='btn btn-primary btn-lg' ng-click=search()>
+                      <span class="glyphicon glyphicon-search"></span>
+                    </button>
+
+                    <input class='input-lg chart-input' type='text' ng-model=chartData placeholder='Enter a list of numbers ..'>
+                    
+            </form>
+            </center>
+        </div>
+
+        <div>
+            <h4>Your input: </h4>
+            <!-- Change color of the input string based on the variable `status`-->
+            <div class="result" ng-repeat="host in hoststatus"> <span ng-class='{"green": host.status, "red":!host.status}'>{{host.name}}</span></div>
+
+            <h4>Results:</h4>
+            <div class="result" ng-repeat="host in results"> <span class='hostname'>{{host.name}}:</span> {{host.ip}} </div>
+        </div>
+
+    </div>
+    <div>
+      <center>
+        <h3>Chart me!</h3>
+        <chart class="chart" width=500 height=800 chart-data="chartData"></chart>
+      </center>
+    </div>
+</div>
