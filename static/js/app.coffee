@@ -1,17 +1,17 @@
 "use strict"
 
-module = angular.module("sampleApp", ["ngRoute"])
+app = angular.module "sampleApp",[
 
-module.config ($routeProvider) ->
+  "ui.router"
 
-  $routeProvider.when("/",
-    title: "Sample Application"
-    templateUrl: "static/partials/sampleapp.html"
+]
 
-  ).when("/link1",
-    title: "Link1 | Sample Application"
-    templateUrl: "static/partials/link1.html"
+app.run ($window, $rootScope, $state, $stateParams) ->
 
-  ).otherwise templateUrl: "static/partials/404.html"
+  # Globaly expose these services
+  $rootScope.$window      = $window
+  $rootScope.$state       = $state
+  $rootScope.$stateParams = $stateParams
 
   return
+

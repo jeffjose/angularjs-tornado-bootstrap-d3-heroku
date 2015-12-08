@@ -1,4 +1,6 @@
-module.controller "sampleAppCtrl", [
+"use strict"
+
+angular.module("sampleApp").controller "SampleAppCtrl", [
 
   "$scope"
   "$http"
@@ -39,4 +41,5 @@ module.controller "sampleAppCtrl", [
       return
 
     return
+
 ]

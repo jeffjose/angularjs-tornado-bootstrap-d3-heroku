@@ -1,4 +1,6 @@
-module.service "sampleAppService", [
+"use strict"
+
+angular.module("sampleApp").service "sampleAppService", [
 
   "$http"
 
@@ -16,7 +18,7 @@ module.service "sampleAppService", [
 # sampleWSAppService provides a WebSocket communication service. 
 # This very well could have been inside `sampleAppService`, but is
 # kept seperate to keep it more organized.
-module.service "sampleWSAppService", [
+angular.module("sampleApp").service "sampleWSAppService", [
 
   "$q"
   "$rootScope"
