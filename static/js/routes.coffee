@@ -10,12 +10,20 @@ app.config ($stateProvider, $urlRouterProvider) ->
 #
 #######################################################
 
-  landing =
-    name: 'landing'
+  home =
+    name: 'home'
     url: ''
-    templateUrl: 'static/partials/sampleapp.html'
+    templateUrl: 'static/partials/home.html'
     controller: 'SampleAppCtrl'
 
-  $stateProvider.state(landing)
+  about =
+    name: 'about'
+    url: '/about'
+    templateUrl: 'static/partials/about.html'
+    controller: 'SampleAppCtrl'
+
+
+  $stateProvider.state(home)
+  $stateProvider.state(about)
 
   return
